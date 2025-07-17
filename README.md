@@ -1,5 +1,5 @@
 ![CSS Flex](https://imgur.com/ytMIIUO.png)
-
+## 
 # CSS Flexbox
 
 Página inicial do Luz e Cena.
@@ -34,6 +34,9 @@ Esses atributos são essenciais para criar um layout flexível, garantindo que a
 ## 📁 Acesso ao Projeto
 
 Você pode [acessar o código-fonte do projeto inicial](https://github.com/monicahillman/3992-css-grid/tree/projeto-base) ou [baixá-lo](https://github.com/monicahillman/3992-css-grid/archive/refs/heads/projeto-base.zip).
+
+** Acessando o protótipo do projeto no figma>>> 
+https://www.figma.com/design/5R7RVz8QGMuOzJafDPnz5h/CSS--Avan%C3%A7ando-em-flexbox-%7C-Luz---Cena--Community-?node-id=0-1&p=f&t=IB2LvaHWOwTDYJmK-0
 
 ## 🛠️ Como Abrir e Rodar o Projeto
 
