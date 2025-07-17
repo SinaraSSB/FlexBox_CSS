@@ -1,0 +1,97 @@
+/* O primeiro estilo a aplicar é no seletor do header, onde colocaremos 
+um max-width de var(--max-width-block), que limitará o espaço que esse cabeçalho pode ocupar, 
+permitindo o uso de margin: 0 auto, que centralizará o cabeçalho. */
+
+.header {
+    margin: 0 auto;
+    max-width: var(--max-width-block);
+}
+
+/* o seletor de nav__list com os seguintes atributos:
+Um display: flex, posicionando os itens da lista lado a lado;
+Um gap: var(--gap-xl), espaçando os itens entre si 
+(a variável foi retirada do Figma  --gap-xl: 3.5rem;);
+Um justify-content: space-between, definindo que os itens serão posicionados 
+na largura definida no cabeçalho, tendo o mesmo espaço entre si;
+Um align-items: center para alinhas todos os itens dentro do flex-container ao centro;
+Um padding de var(--padding-s) 0 para implementar o espaçamento na parte superior 
+e inferior do cabeçalho, mas não nas laterais.
+Um list-style-type: none para remover o círculo à direita dos itens da lista e, remove (marcadores) dos elementos <li>
+Um flex-wrap: wrap, propriedade do Flexbox que permite a quebra de linha dentro do elemento,
+ fazendo com que todos caibam na janela do navegador. */
+
+.nav__list {
+    background-color: bisque;
+    display: flex;
+    gap: var(--gap-xl);
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--padding-s);
+    list-style-type: none;
+    flex-wrap: wrap;
+}
+
+/* O seletor de nav__link
+São vários estilos de texto, com os quais removemos a decoração padrão dos links
+ (a linha abaixo do texto), definimos uma cor específica (preta) e ajustamos 
+ a fonte para seguir o padrão da aplicação, além de definir o tamanho e o peso da fonte. */
+
+ .nav__link {
+    text-decoration: none;
+    color: var(--cor-texto);
+    font-family: var(--fonte-texto);
+    font-size: var(--font-size-m);
+    font-weight: 400;
+}
+
+/* 
+adicionaremos o seletor do nav__input para a lista de localização, que terá:
+
+Um width: 100% para ocupar 100% do espaço disponível no contêiner;
+Um border-radius: 0.5rem para arredondar as bordas;
+Um border: none para remover as bordas;
+Um background-color: var(--cor-de-fundo-input) para adicionar a cor cinza-claro ao fundo, tornando-o mais discreto;
+Um padding: var(--padding-s) para aumentar o espaço interno do campo e facilitar a visualização;
+Um background-image: url("../images/location_on.svg") para adicionar o ícone de localização dentro do campo;
+Um background-repeat: no-repeat para que o ícone só apareça uma vez e
+Um background-position: 95% center posicionando o ícone próximo ao final do campo, à direita, e centralizado na vertical. */
+
+.nav__input {
+    width: 100%;
+    border-radius: 0.5rem;
+    border: none;
+    background-color: var(--cor-de-fundo-input);
+    padding: var(--padding-s);
+    background-image: url("../images/location_on.svg");
+    background-repeat: no-repeat;
+    background-position: 95% center;
+}
+
+/* No Figma, o input ocupa um espaço maior e o menu hambúrguer não aparece no desktop. 
+Adicionando o seletor do menu__toggle, removeremos o menu hambúrguer com display: none. */
+
+.menu__toggle {
+    display: none;
+}
+
+/* Abaixo deste, adicionaremos o seletor do nav__item_form, dentro do qual aumentaremos 
+o espaço do campo de digitação. Como o item da lista é um filho direto do flex-container, 
+podemos usar a propriedade flex para indicar quantos espaços ele deve ocupar.
+Adicionaremos a ele o valor 2, que é suficiente para aumentar a largura do espaço do campo de digitação.
+Já sabemos que o display: flex define um valor fixo para a propriedade flex. No código acima, 
+apenas dobramos esse valor para aumentar o espaço que queremos ocupar. */
+
+.nav__item_form {
+    flex: 2;
+}
+
+/* 
+realizaremos o espaçamento entre os ícones do carrinho e do perfil. 
+Adicionando o seletor do nav__icons, utilizaremos o display: flex mesmo com elementos 
+lado a lado para possibilitar o uso da propriedade gap, que realiza o espaçamento entre os ícone.
+Por fim, definiremos esse gap com a var(--gap-l). */
+
+.nav__icons {
+    display: flex;
+    gap: var(--gap-l);
+}
