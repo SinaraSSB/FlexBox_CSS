@@ -66,24 +66,13 @@ O Flexbox fornece uma maneira mais eficiente e intuitiva de distribuir espaço e
 **order:** Permite alterar a ordem visual dos itens dentro de um contêiner flexível sem alterar o HTML. Itens com um valor de order menor aparecem antes dos itens com valores maiores. Isso é útil para ajustar a ordem dos elementos responsivamente.
 
 Exemplo de código usando order:
-> 
-> <div class="container">
->     <div class="item1">Item 1</div>
->     <div class="item2">Item 2</div>
->     <div class="item3">Item 3</div>
-> </div>`
-> 
-> 
-> .container {
->     display: flex;
-> }
-> 
-> .item1 { order: 2; }
-> .item2 { order: 1; }
-> .item3 { order: 3; }`
 
-.item1 é exibido em segundo lugar.
-.item2 é exibido em primeiro lugar.
-.item3 é exibido em terceiro lugar.
+ 
+ ![exemplo cod](image.png)
+ 
+>  
+> .item1 é exibido em segundo lugar.
+> .item2 é exibido em primeiro lugar.
+> .item3 é exibido em terceiro lugar.
 
 Combinando essas propriedades com media queries, você pode criar layouts adaptáveis que mantêm a funcionalidade e a estética em diferentes dispositivos e tamanhos de tela.
