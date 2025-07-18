@@ -95,3 +95,72 @@ Por fim, definiremos esse gap com a var(--gap-l). */
     display: flex;
     gap: var(--gap-l);
 }
+
+/* -- Layout para tablet com media query -- 
+O gap normal faz um espaçamento entre cada item, 
+enquanto o row-gap faz o espaçamento entre linhas.
+existe o column-gap, que faz o espaçamento entre colunas. 
+Feito isso, podemos utilizar o seletor .nav__item_form, onde faremos a divisão do cabeçalho
+ em duas linhas. Primeiramente, substituiremos o valor de flex para 1 1 100%.
+Em seguida, definiremos um text-align com o valor center e um order de 1. 
+A propriedade flex com vários valores funciona como uma abreviação na utilização do flex-grow, do flex-shrink,
+ e do flex-basis, propriedades que ajudam no posicionamento dos elementos no contêiner. 
+ Já a propriedade order define a ordem em que o flex item será renderizado dentro do flex container. 
+ Se não definirmos nenhum order, todos os itens serão definidos como zero.
+Quando estabelecemos order: 1, o item tem um número maior que os outros, 
+então ele vai para o final do contêiner e, por isso, o posicionamento o mantém na segunda linha.
+-- O último passo para esse tipo de layout será adicionar um espaçamento entre o cabeçalho e as extremidades,
+ direita e esquerda. Para isso, no seletor .header, teremos um padding de 0 var(--padding-xxl).
+  Não queremos nenhum espaçamento em cima e embaixo, mas um espaçamento grande entre os cantos. 
+Dessa forma, o conteúdo não encostará mais nas laterais da tela.*/
+
+@media screen and (max-width: 1200px) {
+    .nav__list {
+        row-gap: var(--gap-l);
+        gap: var(--gap-s);
+    }
+    .nav__item_form {
+        flex: 1 1 100%;
+        text-align: center;
+        order: 1;
+    }
+    .header {
+        padding: 0 var(--padding-xxl);
+    }
+
+}
+
+/* --- layout para dispositivos móveis 
+No layout mobile, criaremos uma nova media query com @media screen and (max-width: 730px).
+Feito isso, a primeira estilação que vamos construir será no seletor .nav__link, 
+com a propriedade display: none, responsável por fazer todos os links desaparecerem.
+ Quando chegamos abaixo de 730px, os links não aparecem mais, pois eles devem estar dentro do menu hambúrguer.
+
+Dito isso, vamos exibir o menu hambúrguer. Chamando a classe .menu__toggle,
+ adicionaremos as propriedades display: block e cursor: pointer.
+ Dessa forma, os links somem do cabeçalho e são exibidos no menu do canto superior esquerdo. 
+ 
+ Dando continuidade à estilização, vamos diminuir o tamanho do padding de .header para 0 var(--padding-m).
+  Além disso, vamos estilizar o .menu__toggle__icon, pois, atualmente, ele possui uma cor de fundo cinza,
+   que é o padrão dos estilos de botões.   Para remover isso, usaremos a propriedade background-color
+    definida como transparent, e uma border com o valor none.*/
+
+@media screen and (max-width: 730px) {
+    .nav__link {
+        display: none;
+    }
+     .menu__toggle {
+        display: block;
+        cursor: pointer;
+    }
+    
+    .header {
+        padding: 0 var(--padding-m);
+    }
+
+    .menu__toggle__icon {
+        background-color: transparent;
+        border: none;
+    }
+}
+    
