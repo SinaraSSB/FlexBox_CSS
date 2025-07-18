@@ -1,0 +1,102 @@
+.cartaz {
+    background-color: bisque;
+    margin: var(--margin-l) auto;
+    max-width: var(--max-width-block);
+}
+
+.cartaz__pesquisa {
+    margin: var(--margin-s) auto var(--margin-m);
+
+    padding: var(--padding-xs) var(--padding-s);
+    width: 100%;
+    max-width: 42.375rem;
+    border-radius: 8px;
+    border: 2px solid var(--border-color);
+    display: block;
+}
+
+/* O campo de digitação já está com várias estilizações, como tamanho, espaçamento interno, borda 
+e arredondamento das bordas. 
+Agora, podemos colocar o símbolo da lupa dentro desse campo de pesquisa. 
+Para .cartaz_pesquisa::placeholder, definiremos a cor do texto com color: var(--cor-texto),
+ font-family: var(--font-texto), e também uma 
+background-image de url("../images/search.svg"), 
+background-repeat: no-repeat, e background-position: right center.
+Essa parte dos backgrounds é a mesma que fizemos no campo de digitação do cabeçalho, 
+fazendo com que o ícone fique dentro do campo de digitação. 
+O background-repeat deve ser no-repeat para evitar repetição. Conseguimos colocar a lupa dentro do input. */
+
+.cartaz__pesquisa::placeholder {
+    color: var(--cor-texto);
+    font-family: var(--fonte-texto);
+    background-image: url("../images/search.svg");
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+
+.menu-list { 
+    display: flex;
+    justify-content: center;
+    gap: var(--gap-s);
+    list-style-type: none;
+
+}
+
+.menu-list__item {
+    font-family: var(--fonte-texto);
+    font-size: var(--font-size-m);
+    font-weight: 400;
+    line-height: var(--line-height-m);
+}
+
+.menu-list__item-ativo {
+font-weight: 700;
+text-decoration: underline;
+}
+
+.cartaz__titulo {
+    font-family: var(--fonte-titulo);
+    font-size: var(--font-size-xl);
+    font-weight: 400;
+    line-height: var(--line-height-l);
+    margin-bottom: var(--margin-l);
+    padding: var(--padding-s);
+}
+/* Na linha 31 do "cartaz.css", selecionaremos menu-list__item e aplicaremos
+ font-family: var(--fonte-texto), font-size: var(--fonte-size-m), 
+ font-weight: 400, e line-height: var(--line-height-m).
+  Também estilizamos o item ativo, menu-list__item-ativo,
+   com font-weight: 700 e text-decoration: underline, que cria uma linha embaixo do texto. 
+   
+   .cartaz__titulo, onde aplicamos font-family: var(--fonte-titulo), font-size: var(--font-size-l), 
+   font-weight: 400, line-height: var(--line-height-l), e margin-bottom: var(--margin-l).
+ Alteramos o font-size da linha 45 de l para xl.*/
+
+
+ /* --- Essa configuração é destinada ao nosso tablet. */
+
+ @media screen and (max-width: 1200px) {
+    .cartaz {
+        padding: 0 var(--padding-xxl);
+    }
+    .menu-list {
+    gap: var(--gap-xs);
+    }
+    .cartaz__pesquisa {
+    padding: var(--padding-xs) var(--padding-s);
+    max-width: 100%;
+    }
+    .cartaz__titulo {
+    font-size: var(--font-size-m);
+    line-height: var(--line-height-m);
+    }
+}
+
+/* Diminuímos o tamanho do texto e passamos para a media query de celular */
+
+@media screen and (max-width: 730px) {
+    .cartaz {
+        padding: 0 var(--padding-m);
+    }
+}
+

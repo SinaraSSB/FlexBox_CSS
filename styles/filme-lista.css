@@ -1,0 +1,46 @@
+.filmes {
+    background-color:  bisque;
+    padding: var(--padding-xl);
+}
+
+.filme-list {
+    display: flex;
+    row-gap: var(--gap-xl);
+    justify-content: space-around;
+    flex-wrap: wrap;
+    list-style-type: none;
+  
+}
+
+.filme-list_item {
+    background-color:var(--cor-de-fundo);
+}
+
+.filme-list_item-titulo {
+    font-family: var(--fonte-titulo);
+    font-size: var(--font-size-s);
+    /* padding: var(--padding-xs); */
+  
+}
+.filme-list_descricao-dimensao {
+    background-color: var(--border-color);
+    border-radius: 6px;
+    padding: 0.3rem;
+}
+
+.filme-list_descricao-idade {
+    background-color: var(--cor-faixa-etaria);
+    border-radius: 6px;
+    padding: 0.1rem 0.3rem 0.1rem 0.3rem;
+
+}
+.container {
+    display: flex;
+    flex-direction: column;
+  gap: var(--gap-xs);
+}
+
+.linha {
+  justify-content: space-between;
+  gap: var(--gap-xs);
+}
