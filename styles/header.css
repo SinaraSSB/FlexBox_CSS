@@ -5,6 +5,8 @@ permitindo o uso de margin: 0 auto, que centralizará o cabeçalho. */
 .header {
     margin: 0 auto;
     max-width: var(--max-width-block);
+    /* background-color: bisque;  */
+
 }
 
 /* o seletor de nav__list com os seguintes atributos:
@@ -21,7 +23,7 @@ Um flex-wrap: wrap, propriedade do Flexbox que permite a quebra de linha dentro 
  fazendo com que todos caibam na janela do navegador. */
 
 .nav__list {
-    background-color: bisque;
+   
     display: flex;
     gap: var(--gap-xl);
     justify-content: space-between;

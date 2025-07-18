@@ -1,0 +1,59 @@
+/* Optamos por utilizar essa medida responsiva, que é a altura da janela do navegador,
+ mas poderíamos colocar aqueles 600 e poucos pixels que visualizamos no Figma também.
+ Na linha 3, começamos a colocar a imagem de fundo através do background-image: 
+ Como não é uma imagem que faz diferença no conteúdo da tela, não é necessário colocá-la no HTML,
+  podemos colocá-la no CSS. Visualizamos no navegador que a imagem já tem o tamanho ideal, 
+  mas ao abrir o inspecionar elemento e diminuir o tamanho da tela, a imagem não acompanha,
+   aparecendo apenas de maneira parcial e não centralizada.
+  Então, colocamos um background-position de center para posicioná-la independente da tela, a partir do centro.*/
+ 
+.banner {
+  height: 60vh;
+  background-image: url("../images/Banner.png");
+  background-position: center;
+}
+
+/* Para alinhar o texto verticalmente, colocamos o display: flex no 
+container e o flex-direction: column. Por padrão, o display: flex coloca o flex-direction 
+como row, que posiciona os elementos de um lado para o outro. Ao colocarmos como coluna, ele transforma em uma coluna.
+
+Se houvesse outros elementos dentro dele, ficariam posicionados um abaixo do outro.
+ Transformamos em coluna porque, ao centralizar, ele faz essa centralização pensando na coluna e não na linha.
+  Usamos justify-content: center e align-items: center. O align-items: center centralizou até demais, então, 
+  colocamos align-items: flex-start.
+
+O justify-content: center alinha ao centro considerando a coluna e o align-items: flex-start faz o
+ alinhamento a partir do início do container. */
+
+.banner__container {
+    max-width: var(--max-width-block);
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* editamos o texto, que está difícil de visualizar por estar na cor preta em um fundo escuro. 
+No "banner.css", estilizamos o .banner__titulo: 
+Visualizamos no navegador que o texto aumentou de tamanho e a cor alterou, mas "encontra a fantasia" 
+não está estilizado porque está dentro do span. Precisamos editar o titulo-destaque:*/
+
+.banner__titulo {
+  font-family: var(--fonte-titulo);
+  font-size: 4.75rem;
+  font-weight: 400;
+  line-height: 1.2em;
+  color: var(--cor-texto-claro);
+  width: 50%;
+}
+
+.banner__titulo-destaque {
+  color: var(--cor-texto-destaque);
+  font-size: 4.75rem;
+  font-weight: 400;
+  line-height: 1.2em;
+}
