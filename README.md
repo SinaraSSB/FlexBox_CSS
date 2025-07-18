@@ -69,10 +69,12 @@ Exemplo de código usando order:
 
  
  ![exemplo cod](image.png)
- 
+
 >  
 > .item1 é exibido em segundo lugar.
+>
 > .item2 é exibido em primeiro lugar.
+>
 > .item3 é exibido em terceiro lugar.
 
 Combinando essas propriedades com media queries, você pode criar layouts adaptáveis que mantêm a funcionalidade e a estética em diferentes dispositivos e tamanhos de tela.
