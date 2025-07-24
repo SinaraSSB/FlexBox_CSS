@@ -128,10 +128,9 @@ E qual será o tamanho base de um item (flex-basis).
 
 1. flex-grow
 A propriedade flex-grow define quanto um item pode crescer em relação aos outros quando há espaço extra no contêiner flexível. Se todos os itens tiverem flex-grow: 1, eles crescerão igualmente. No entanto, se um item tiver flex-grow: 2, ele ocupará o dobro do espaço extra em relação a um item com flex-grow: 1.
-
-
-
 Neste caso, o item com flex-grow: 2 crescerá duas vezes mais do que os outros.
+
+![alt text](image-1.png)
 
 2. flex-shrink
 A propriedade flex-shrink controla como os itens encolhem quando o espaço é reduzido. Um valor maior de flex-shrink permite que o item encolha mais do que os outros. Por padrão, a maioria dos itens tem flex-shrink: 1, o que significa que encolhem proporcionalmente. Se um item tiver flex-shrink: 0, ele não encolherá.
