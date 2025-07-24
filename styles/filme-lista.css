@@ -5,15 +5,43 @@
 
 .filme-list {
     display: flex;
-    row-gap: var(--gap-xl);
+    /* row-gap: var(--gap-xl); */
+    gap: var(--gap-m);
     justify-content: space-around;
     flex-wrap: wrap;
     list-style-type: none;
+    align-items: flex-start;
   
 }
 
+ /* queremos utilizar o flex-grow de 1. O flex-grow define o fator de crescimento do item. Isso significa que, quando 
+ a tela começar a aumentar, o item também aumentará para ocupar o espaço liberado dentro do nosso flex container. 
+ ueremos o mesmo comportamento para quando a tela diminuir, então utilizaremos o flex-shrink como 1. 
+ Também podemos definir o flex-basis como 32%. O flex-basis define a base do flex, ou seja,
+  queremos que, por padrão, cada item ocupe 32% do nosso flex container.
+Se não quisermos escrever essas três propriedades separadamente, poderiamos 
+usar a propriedade flex e resumir como flex: 1 1 32%. Isso seria equivalente ao que digitamos anteriormente.
+aplicar um cursor: pointer para que a pessoa usuária tenha a sensação de que cada um desses cards é clicável.*/
+
 .filme-list_item {
     background-color:var(--cor-de-fundo);
+    box-shadow: var(--box-shadow-card);
+    cursor: pointer; 
+    /* flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 32%; não gostei  */
+
+}
+/* Vamos continuar com as estilizações internas desses cards, como, por exemplo, no filme-list__imagem,
+ definindo width: 100% e object-fit: cover. Isso não fará muita diferença visualmente, pois as imagens 
+ já ocupam um espaço adequado na aplicação. No entanto, quando começarmos a diminuir a tela e os cards 
+ se adaptarem, ao reduzir a tela para cerca de 352 pixels, os cards começarão a diminuir. Caso as imagens 
+fiquem menores de acordo com o tamanho da tela, o object-fit: cover garantirá que a imagem preencha 
+o espaço disponível. */
+
+.filme-list_imagem {
+    width: 100%;
+    object-fit: cover;
 }
 
 .filme-list_item-titulo {
@@ -23,7 +51,7 @@
   
 }
 .filme-list_descricao-dimensao {
-    background-color: var(--border-color);
+    background-color: var(--cor-de-fundo-faixa-etaria);
     border-radius: 6px;
     padding: 0.3rem;
 }
@@ -41,6 +69,7 @@
 }
 
 .linha {
+  background-color: aqua;
   justify-content: space-between;
-  gap: var(--gap-xs);
+  /* gap: var(--gap-xxl); */
 }
