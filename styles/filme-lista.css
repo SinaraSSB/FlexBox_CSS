@@ -71,5 +71,6 @@ o espaço disponível. */
 .linha {
   background-color: aqua;
   justify-content: space-between;
+ 
   /* gap: var(--gap-xxl); */
 }

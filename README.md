@@ -68,7 +68,7 @@ O Flexbox fornece uma maneira mais eficiente e intuitiva de distribuir espaço e
 Exemplo de código usando order:
 
  
- ![exemplo cod](image.png)
+ ![exemplo cod](/images/image.png)
 
 >  
 > .item1 é exibido em segundo lugar.
@@ -130,19 +130,19 @@ E qual será o tamanho base de um item (flex-basis).
 A propriedade flex-grow define quanto um item pode crescer em relação aos outros quando há espaço extra no contêiner flexível. Se todos os itens tiverem flex-grow: 1, eles crescerão igualmente. No entanto, se um item tiver flex-grow: 2, ele ocupará o dobro do espaço extra em relação a um item com flex-grow: 1.
 Neste caso, o item com flex-grow: 2 crescerá duas vezes mais do que os outros.
 
-![alt text](image-1.png)
+![alt text](./images/image-1.png)
 
 2. flex-shrink
 A propriedade flex-shrink controla como os itens encolhem quando o espaço é reduzido. Um valor maior de flex-shrink permite que o item encolha mais do que os outros. Por padrão, a maioria dos itens tem flex-shrink: 1, o que significa que encolhem proporcionalmente. Se um item tiver flex-shrink: 0, ele não encolherá.
 
-![alt text](image-2.png)
+![alt text](./images/image-2.png)
 
 Aqui, o item com flex-shrink: 0 permanecerá do mesmo tamanho, mesmo quando o espaço no contêiner for reduzido.
 
 3. flex-basis
 A propriedade flex-basis define o tamanho inicial de um item antes de o espaço restante ser distribuído. Ela pode ser definida como um valor fixo (por exemplo, 200px) ou como um valor relativo (por exemplo, auto).
 
-![alt text](image-3.png)
+![alt text](./images/image-3.png)
 
 Neste caso, o item começará com 100px de largura, e depois poderá crescer ou encolher com base nas outras propriedades (flex-grow e flex-shrink).
 
