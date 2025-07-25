@@ -62,15 +62,26 @@ o espaço disponível. */
     padding: 0.1rem 0.3rem 0.1rem 0.3rem;
 
 }
-.container {
-    display: flex;
-    flex-direction: column;
-  gap: var(--gap-xs);
+
+.filme-list__descricao-idade-livre {
+    background-color: var(--cor-faixa-etaria-livre);
+    border-radius: 6px;
+    padding: 0.1rem 0.3rem 0.1rem 0.3rem;
 }
 
-.linha {
-  background-color: aqua;
+.film_container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-xs);
+}
+
+.filme-list_linha {
+  /* background-color: aqua; */
+  display: flex;
   justify-content: space-between;
+  flex-direction: row;
+  /* align-items: center; */
  
   /* gap: var(--gap-xxl); */
 }
+

@@ -147,3 +147,10 @@ A propriedade flex-basis define o tamanho inicial de um item antes de o espaço 
 Neste caso, o item começará com 100px de largura, e depois poderá crescer ou encolher com base nas outras propriedades (flex-grow e flex-shrink).
 
 Compreender e usar flex-grow, flex-shrink e flex-basis permite criar layouts flexíveis e responsivos com precisão. Ao dominar essas propriedades, você poderá ajustar o comportamento dos seus elementos de forma eficiente, garantindo que seu design funcione bem em qualquer tamanho de tela.
+
+> flex-grow: 1;
+> flex-shrink: 1;
+> flex-basis: 200px;
+> 
+> Esta configuração permite que o elemento cresça para preencher o espaço disponível,
+>  encolha se necessário para evitar a rolagem horizontal, e define um tamanho base de 200px.
