@@ -81,7 +81,6 @@ o espaço disponível. */
   justify-content: space-between;
   flex-direction: row;
   /* align-items: center; */
- 
-  /* gap: var(--gap-xxl); */
+   /* gap: var(--gap-xxl); */
 }
 
