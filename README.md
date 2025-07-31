@@ -156,3 +156,8 @@ Compreender e usar flex-grow, flex-shrink e flex-basis permite criar layouts fle
 > 
 > Esta configuração permite que o elemento cresça para preencher o espaço disponível,
 >  encolha se necessário para evitar a rolagem horizontal, e define um tamanho base de 200px.
+
+> Centralizando elementos de uma lista
+ > display: flex; para ativar o Flexbox, flex-direction: column; para organizar os itens em uma coluna,
+ > justify-content: center; para centralizar verticalmente 
+ > e margin: 0 auto; para centralizar horizontalmente.

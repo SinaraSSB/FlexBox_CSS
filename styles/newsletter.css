@@ -1,0 +1,83 @@
+/* .newsletter {
+    background-color: aquamarine;
+} */
+
+/* .newsletter {
+    background-color: var(--cor-de-fundo-newsletter);
+    padding: var(--padding-xxl) 0;
+} */
+.newsletter__container {
+    background-color: var(--cor-de-fundo-newsletter); 
+    max-width: var(--max-width-block);
+      margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: var(--padding-xxl) 0;
+     /* o padding adicionado acima ficará somente em cima e embaixo, não nas laterais. */
+    
+
+}
+
+.newsletter__titulo {
+     color: var(--cor-texto);
+    font-family: var(--fonte-titulo);
+    font-size: var(--font-size-l);
+     line-height: 1.2em;
+}
+
+.newsletter__form {
+    /* background-color: antiquewhite; */
+    display: flex;
+     /* padding: var(--padding-s); */
+     gap: var(--gap-s);
+
+     
+}
+
+.newsletter__input {
+    flex-grow: 1;
+    padding: var(--padding-s) var(--padding-m);
+    /* min-width: 25rem; */
+    font-family: var(--fonte-texto);
+    font-size: var(--font-size-s);
+    border: 2px solid var(--cor-de-fundo-footer);
+    border-radius: 8px;
+}
+.newsletter__button {
+    color: var(--cor-texto-claro);
+    background-color: var(--cor-de-fundo-footer);
+    padding: var(--padding-s) var(--padding-m);
+    border-radius: 8px;
+    font-family: var(--fonte-texto);
+    font-size: var(--font-size-s);
+    line-height: 1.2em;
+    border: none;
+    border-radius: 8px;
+}
+
+.tarjeta {
+    background-image: url('../images/tarjeta.png');
+    background-repeat: no-repeat;
+    padding: 0.2rem;
+}
+
+/* media queries */
+
+@media screen and (max-width: 1200px) {
+    .newsletter {
+        padding: var(--padding-xs) var(--padding-m);
+    }
+}
+
+
+
+@media screen and (max-width: 730px) {
+    .newsletter__form {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}

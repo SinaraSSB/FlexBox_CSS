@@ -1,0 +1,28 @@
+.footer {
+    background-color: var(--cor-de-fundo-footer);
+   
+}
+
+.footer__columns { 
+    display: flex;
+    justify-content: space-between;
+    /* gap: var(--gap-xl); */
+    padding: var(--padding-m);
+}
+
+.footer__column-titulo {
+    color: var(--cor-texto-claro);
+    font-family: var(--fonte-texto);
+}
+
+.footer__column-text {
+    color: var(--cor-texto-claro);
+    padding-top: var(--padding-m) ;
+}
+.footer__column-list {
+    color: var(--cor-texto-claro);
+    padding-top: var(--padding-m);
+    list-style-type: none;
+
+    
+}
