@@ -175,3 +175,37 @@ Para renomear uma branch no Git, você pode fazer isso localmente com o seguinte
 
 
 --- 
+
+## Para excluir uma branch no Git, você pode seguir os passos abaixo:
+
+**Introdução** Primeiro, é importante entender que existem dois tipos de branches que você pode querer excluir: locais e remotas. A exclusão de uma branch local remove-a do seu repositório local, enquanto a exclusão de uma branch remota remove-a do repositório remoto.
+
+Comandos Git
+### 1. Excluir uma branch local:
+`git branch -d nome-da-branch`
+Use o comando acima para excluir uma branch local. 
+Se a branch ainda não foi mesclada, você pode usar a opção -D (maiúscula)
+ para forçar a exclusão:  `git branch -D nome-da-branch`
+
+### 2. Excluir uma branch remota:
+
+`git push origin --delete nome-da-branch`
+Este comando remove a branch do repositório remoto.
+
+
+--- 
+## merge 
+
+1. Verifique se está no branch main:
+`git checkout main`
+2. Atualize o branch main:
+`git pull origin main`
+3. Faça o merge do branch desejado no main:
+`git merge nome-do-branch`
+4. Resolva conflitos, se houver: Se houver conflitos, o Git indicará os arquivos que precisam ser resolvidos. Edite esses arquivos para resolver os conflitos e depois adicione as mudanças:
+`git add nome-do-arquivo`
+5. Finalize o merge 
+`git commit`
+6. Envie as mudanças para o repositório remoto:
+`git push origin main`
+

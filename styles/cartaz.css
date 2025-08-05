@@ -1,12 +1,11 @@
 .cartaz {
-    background-color: bisque;
-    margin: var(--margin-l) auto;
+    /* background-color: bisque; */
+    margin: var(--margin-m) auto;
     max-width: var(--max-width-block);
 }
 
 .cartaz__pesquisa {
     margin: var(--margin-s) auto var(--margin-m);
-
     padding: var(--padding-xs) var(--padding-s);
     width: 100%;
     max-width: 42.375rem;
