@@ -8,6 +8,8 @@ Para renomear uma branch no Git, você pode fazer isso localmente com o seguinte
 
 --- 
 
+## Enviar os commits da sua branch local para o repositório remoto.
+
 O comando:
 
 `git push -u origin main`
@@ -36,6 +38,9 @@ sem precisar especificar o nome do repositório e da branch, porque o Git já sa
 
 
 --- 
+
+##  Criar uma nova branch local a baseada em uma branch remota
+
 `git checkout -b nomebranch origin/nomebranch`
 
 
