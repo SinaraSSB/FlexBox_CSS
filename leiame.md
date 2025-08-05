@@ -1,13 +1,6 @@
 # Git 
 --- 
 
-Para renomear uma branch no Git, você pode fazer isso localmente com o seguinte comando:
-
-`git branch -m nome-antigo nome-novo`
-
-
---- 
-
 ## Enviar os commits da sua branch local para o repositório remoto.
 
 O comando:
@@ -171,3 +164,14 @@ mas ainda não está rastreando, esse comando conecta as duas.
 
 ` git status`  ou   `git branch -vv`
 
+
+--- 
+
+## Renomear uma Branch
+
+Para renomear uma branch no Git, você pode fazer isso localmente com o seguinte comando:
+
+`git branch -m nome-antigo nome-novo`
+
+
+--- 
