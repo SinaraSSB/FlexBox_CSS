@@ -213,14 +213,17 @@ Este comando remove a branch do repositório remoto.
 ---
 ### desfazer um merge no Git, você pode seguir os passos abaixo:
 
-1. Verifique o histórico de commits: `git log`
+1. Verifique o histórico de commits: 
+ `git log`
   Encontre o commit anterior ao merge que você deseja desfazer. Anote o hash desse commit.
 2. Desfaça o merge:
  Substitua <hash-do-commit-anterior> pelo hash do commit que você anotou no passo anterior.
+ 
 `git reset --hard <hash-do-commit-anterior>`
 
 3. Envie as mudanças para o repositório remoto:
 Lembre-se de que o comando --force sobrescreve o histórico no repositório remoto, 
 então use-o com cuidado.
+
 `git push origin main --force`
 
