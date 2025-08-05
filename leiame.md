@@ -33,6 +33,7 @@ Define a branch main local para rastrear a branch main no remoto. Isso significa
 sem precisar especificar o nome do repositório e da branch, porque o Git já sabe para onde enviar ou buscar os dados.
 
 `git push`
+
 `git pull`
 
 Quando você está configurando um novo projeto, 
@@ -47,7 +48,9 @@ Se você acabou de iniciar o repositório com git init, certifique-se de ter fei
 Exemplo:
 
 `git add .`
+
 `git commit -m "Primeiro commit"`
+
 `git push -u origin main`
 
 
