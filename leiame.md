@@ -35,6 +35,20 @@ sem precisar especificar o nome do repositório e da branch, porque o Git já sa
 `git push`
 `git pull`
 
+Quando você está configurando um novo projeto, 
+o comando git push -u origin main é especialmente útil porque:
+
+Publica sua branch principal (main) no repositório remoto (origin).
+**Estabelece um vínculo entre a branch local e a remota,** 
+facilitando comandos futuros como git pull e git push sem precisar repetir os nomes.
+**Dica extra:**
+Se você acabou de iniciar o repositório com git init, certifique-se de ter feito pelo menos um commit antes de usar esse comando. 
+
+Exemplo:
+
+`git add .`
+`git commit -m "Primeiro commit"`
+`git push -u origin main`
 
 
 --- 
