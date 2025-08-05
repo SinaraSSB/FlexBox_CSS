@@ -1,13 +1,9 @@
-/* .newsletter {
-    background-color: aquamarine;
-} */
-
-/* .newsletter {
+.newsletter {
     background-color: var(--cor-de-fundo-newsletter);
-    padding: var(--padding-xxl) 0;
-} */
+  }
+
 .newsletter__container {
-    background-color: var(--cor-de-fundo-newsletter); 
+    /* background-color: var(--cor-de-fundo-newsletter);  */
     max-width: var(--max-width-block);
       margin: 0 auto;
     display: flex;

@@ -56,7 +56,7 @@ Exemplo:
 
 --- 
 
-##  Criar uma nova branch local a baseada em uma branch remota
+##  1. Criar uma nova branch local a baseada em uma branch remota
 
 `git checkout -b nomebranch origin/nomebranch`
 
@@ -81,3 +81,93 @@ Se alguém criou uma branch chamada feature/api no GitHub e você quer começar 
 `git checkout -b feature/api origin/feature/api`
 
 > Isso evita conflitos e garante que sua branch local esteja sincronizada com a versão remota.
+
+--- 
+# desfazer o commit 
+
+Você pode desfazer um commit no Git de diferentes formas, dependendo do que exatamente você quer fazer. Aqui estão os principais cenários:
+
+🔙 1. Desfazer o último commit, mas manter as alterações 
+no código (no seu diretório de trabalho):
+
+`git reset --soft HEAD~1`
+
+Isso desfaz o commit, mas mantém os arquivos preparados para o commit (stage).
+
+📝 2. Desfazer o último commit e também remover 
+os arquivos do stage (mas manter no diretório):
+
+`git reset --mixed HEAD~1`
+
+Os arquivos continuam no seu diretório, mas não estão mais preparados para commit.
+
+🧹 3. Desfazer o commit e apagar as alterações (cuidado!):
+
+`git reset --hard HEAD~1`
+
+Isso desfaz o commit e apaga as alterações feitas. Use com cautela!
+
+🌐 Se o commit já foi enviado para o remoto (git push)
+Você pode desfazer localmente e forçar a atualização no remoto:
+
+`git reset --hard HEAD~1`
+
+`git push origin HEAD --force`
+
+⚠️ Atenção: Isso pode causar problemas para outras pessoas que estão trabalhando na mesma branch. Use com cuidado e preferencialmente em branches pessoais.
+
+Como o commit ainda está só local, você pode desfazê-lo com segurança. Aqui estão duas opções comuns:
+
+✅ 1. Manter as alterações no seu diretório (mais seguro)
+
+`git reset --soft HEAD~1`
+
+Desfaz o commit. Mantém os arquivos no stage, prontos para um novo commit.
+
+
+✅ 2. Remover do stage, mas manter os arquivos modificados:
+
+`git reset --mixed HEAD~1`
+
+Desfaz o commit. Os arquivos voltam para o diretório, 
+mas não estão mais preparados para commit.
+
+> Se você quiser ver o histórico antes de desfazer, pode usar:
+>  Isso mostra os commits recentes com seus IDs curtos.
+> git log --oneline
+
+---
+
+--- 
+
+# 2. configurar o rastreamento da branch local c/ a remoto 
+
+`git branch -u origin/novobranch novobranch`
+
+tem a função de configurar o rastreamento remoto da branch local novobranch
+ para a branch remota origin/novobranch.
+
+Explicando cada parte:
+
+git branch: comando para gerenciar branches.
+
+-u ou --set-upstream-to: define qual branch remota a branch local deve rastrear.
+
+origin/novobranch: é a branch remota no repositório chamado origin.
+
+novobranch: é a branch local que você quer configurar.
+
+O que isso faz?
+Depois de executar esse comando:
+A branch local novobranch passa a rastrear a branch remota origin/novobranch.
+Você poderá usar comandos como git pull e git push sem precisar especificar
+ o nome da branch remota.
+
+Exemplo prático:
+Se você criou uma branch local chamada novobranch e ela já existe no remoto, 
+mas ainda não está rastreando, esse comando conecta as duas.
+
+###  como verificar se a branch está rastreando corretamente com:
+
+` git status`  ou   `git branch -vv`
+
